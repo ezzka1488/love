@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ 5 причин, почему твой парень крут ❤️</title>
+    
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Подключение романтических и современных шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Иконки FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        rosePetal: '#fff0f5',
+                        blushPink: '#ffd1dc',
+                        sakura: '#ffb7c5',
+                        crimsonLove: '#e11d48',
+                        roseGold: '#e09f9f',
+                        berry: '#9f1239'
+                    },
+                    animation: {
+                        'heartbeat': 'heartbeat 1.5s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        heartbeat: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '15%': { transform: 'scale(1.18)' },
+                            '30%': { transform: 'scale(1)' },
+                            '45%': { transform: 'scale(1.12)' },
+                            '60%': { transform: 'scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(3deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Основные стили и кастомные градиенты */
+        body {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe4ec 35%, #ffd6e4 70%, #ffc2d6 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #4a1525;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Эффект матового стекла (Glassmorphism) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.62);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1.5px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 15px 35px -5px rgba(225, 29, 72, 0.12), 
+                        0 5px 15px -3px rgba(244, 114, 182, 0.15),
+                        inset 0 0 20px rgba(255, 255, 255, 0.6);
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+                        box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        border-color 0.35s ease;
+        }
+
+        .glass-card:hover {
+            box-shadow: 0 25px 45px -8px rgba(225, 29, 72, 0.22), 
+                        0 0 25px rgba(251, 113, 133, 0.35),
+                        inset 0 0 25px rgba(255, 255, 255, 0.9);
+            border-color: rgba(255, 255, 255, 1);
+        }
+
+        /* 3D объемное сердце на CSS */
+        .heart-3d-wrapper {
+            filter: drop-shadow(0 20px 30px rgba(225, 29, 72, 0.38));
+        }
+
+        .heart-3d {
+            position: relative;
+            width: 110px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .heart-3d::before,
+        .heart-3d::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 56px;
+            height: 90px;
+            border-radius: 50px 50px 0 0;
+            background: radial-gradient(circle at 30% 25%, #ff8fa3, #f43f5e 45%, #be123c 90%);
+            box-shadow: inset -4px -6px 12px rgba(136, 19, 55, 0.45),
+                        inset 5px 5px 12px rgba(255, 228, 230, 0.75);
+        }
+
+        .heart-3d::before {
+            left: 55px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart-3d::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        /* Блик на 3D сердце */
+        .heart-shine {
+            position: absolute;
+            top: 16px;
+            left: 22px;
+            width: 18px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 50%;
+            transform: rotate(-35deg);
+            z-index: 10;
+            filter: blur(1px);
+        }
+
+        /* Анимация появления при скролле */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.96);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Градиентный переливающийся текст */
+        .text-gradient-love {
+            background: linear-gradient(120deg, #be123c, #f43f5e, #ec4899, #be123c);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shineText 4s linear infinite;
+        }
+
+        @keyframes shineText {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Кнопка с эффектом блика */
+        .btn-love {
+            background: linear-gradient(135deg, #fb7185 0%, #e11d48 50%, #be123c 100%);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-love::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.35);
+            transform: rotate(25deg);
+            transition: all 0.6s ease;
+        }
+
+        .btn-love:hover::after {
+            left: 120%;
+        }
+
+        .btn-love:active {
+            transform: scale(0.95);
+        }
+
+        /* Декоративные размытые пятна на фоне */
+        .bg-blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(70px);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.55;
+        }
+
+        /* Кастомный скроллбар */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe4ec;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #fb7185, #e11d48);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="relative antialiased selection:bg-pink-300 selection:text-rose-900">
+
+    <!-- Декоративные световые пятна на заднем плане -->
+    <div class="bg-blob w-72 h-72 sm:w-96 sm:h-96 bg-pink-300 top-[-5%] left-[-10%] animate-pulse-slow"></div>
+    <div class="bg-blob w-80 h-80 sm:w-[30rem] sm:h-[30rem] bg-rose-300 bottom-[10%] right-[-10%] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="bg-blob w-64 h-64 bg-fuchsia-200 top-[45%] left-[30%] animate-pulse-slow" style="animation-delay: 1s;"></div>
+
+    <!-- Canvas для фоновых летающих сердечек и салюта при кликах -->
+    <canvas id="heartCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+    <!-- Плавающая мини-панель счетчика любви сверху -->
+    <header class="fixed top-4 left-0 right-0 z-30 px-4 pointer-events-none">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="glass-card px-4 py-2 rounded-full pointer-events-auto flex items-center gap-2 text-xs sm:text-sm font-semibold text-rose-800">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+                <span>Официальный рейтинг крутости</span>
+            </div>
+            
+            <button id="topLoveBtn" onclick="triggerLoveBoost(event)" class="glass-card px-4 py-2 rounded-full pointer-events-auto flex items-center gap-2 text-xs sm:text-sm font-bold text-rose-700 hover:bg-white/90 active:scale-95 transition cursor-pointer group">
+                <i class="fa-solid fa-heart text-rose-500 group-hover:scale-125 transition-transform"></i>
+                <span>Любовь: <span id="loveCounter" class="text-rose-600 font-extrabold">100</span>%</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- HERO-СЕКЦИЯ (Главный экран) -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center pt-20 pb-12">
+            
+            <!-- Пульсирующее 3D-сердце -->
+            <div onclick="burstAtElement(this, 35)" class="heart-3d-wrapper mb-8 cursor-pointer animate-heartbeat group" title="Нажми на меня!">
+                <div class="heart-3d">
+                    <div class="heart-shine"></div>
+                </div>
+                <span class="block mt-3 text-xs font-medium text-rose-500/80 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Тыкни на сердечко ✨
+                </span>
+            </div>
+
+            <!-- Бейдж -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 border border-pink-200 text-rose-600 text-xs sm:text-sm font-semibold mb-5 shadow-sm animate-float">
+                <i class="fa-solid fa-crown text-amber-500"></i>
+                <span>Специально для самой лучшей девушки на свете</span>
+            </div>
+
+            <!-- Главный заголовок -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 text-gradient-love drop-shadow-sm">
+                Топ 5 причин, почему твой парень невероятно крут
+            </h1>
+
+         
+            </p>
+
+            <p class="max-w-xl text-sm sm:text-base md:text-lg text-rose-900/80 mb-10 leading-relaxed font-medium">
+                Научно доказано, проверено временем и подтверждено твоей улыбкой. Листай вниз, чтобы ознакомиться со всеми неопровержимыми фактами!
+            </p>
+
+            <!-- Кнопки действий -->
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <a href="#reasons" onclick="burstAtEvent(event, 20)" class="btn-love text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-rose-500/30 flex items-center gap-3 text-base sm:text-lg">
+                    <span>Узнать правду</span>
+                    <i class="fa-solid fa-arrow-down animate-bounce"></i>
+                </a>
+                
+                <button onclick="triggerLoveBoost(event)" class="glass-card text-rose-700 font-semibold px-7 py-4 rounded-full hover:bg-white/85 flex items-center gap-2 text-base transition cursor-pointer">
+                    <i class="fa-solid fa-heart-pulse text-rose-500"></i>
+                    <span>Нажми, если любишь меня</span>
+                </button>
+            </div>
+
+            <!-- Всплывающий комплимент при нажатии на кнопку любви -->
+            <div id="complimentToast" class="mt-6 h-8 flex items-center justify-center">
+                <p id="complimentText" class="text-sm sm:text-base font-semibold text-rose-700 bg-white/80 px-5 py-1.5 rounded-full shadow-sm opacity-0 transition-all duration-300 transform translate-y-2"></p>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ С 5 ПРИЧИНАМИ -->
+        <section id="reasons" class="py-16 sm:py-24 space-y-8 sm:space-y-12">
+            
+            <div class="text-center mb-12 reveal">
+                <span class="font-handwriting text-3xl text-rose-500 block mb-1">Факты, с которыми не поспоришь</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-rose-900">
+                    5 главных суперспособностей
+                </h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-pink-400 via-rose-500 to-pink-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Сетка карточек -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                
+                <!-- Причина 1 -->
+                <article class="tilt-card glass-card rounded-3xl p-7 sm:p-9 relative overflow-hidden reveal group cursor-pointer" onclick="burstAtEvent(event, 22)">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 bg-gradient-to-br from-pink-300/40 to-rose-400/30 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="flex items-start justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-600 text-white flex items-center justify-center text-2xl shadow-md shadow-rose-500/25 group-hover:rotate-6 transition-transform">
+                            <i class="fa-solid fa-hands-holding-heart"></i>
+                        </div>
+                        <span class="font-serif text-4xl font-bold text-rose-300/80 select-none">01</span>
+                    </div>
+                    
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-900 mb-3 group-hover:text-rose-600 transition-colors">
+                        Всегда рядом и на твоей стороне
+                    </h3>
+                    <p class="text-rose-900/80 leading-relaxed text-sm sm:text-base">
+                        Поддержит в любой ситуации, внимательно выслушает, крепко обнимет и спасёт от любого плохого настроения всего за пару минут. Личный антистресс 24/7!
+                    </p>
+                </article>
+
+                <!-- Причина 2 -->
+                <article class="tilt-card glass-card rounded-3xl p-7 sm:p-9 relative overflow-hidden reveal group cursor-pointer" onclick="burstAtEvent(event, 22)">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 bg-gradient-to-br from-pink-300/40 to-rose-400/30 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="flex items-start justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white flex items-center justify-center text-2xl shadow-md shadow-rose-500/25 group-hover:-rotate-6 transition-transform">
+                            <i class="fa-solid fa-face-laugh-beam"></i>
+                        </div>
+                        <span class="font-serif text-4xl font-bold text-rose-300/80 select-none">02</span>
+                    </div>
+                    
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-900 mb-3 group-hover:text-rose-600 transition-colors">
+                        Идеальное чувство юмора
+                    </h3>
+                    <p class="text-rose-900/80 leading-relaxed text-sm sm:text-base">
+                        Умеет искренне рассмешить, даже когда совсем не хочется улыбаться (и вообще, будем честны, его шутки — настоящий шедевр комедийного искусства).
+                    </p>
+                </article>
+
+                <!-- Причина 3 -->
+                <article class="tilt-card glass-card rounded-3xl p-7 sm:p-9 relative overflow-hidden reveal group cursor-pointer" onclick="burstAtEvent(event, 22)">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 bg-gradient-to-br from-pink-300/40 to-rose-400/30 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="flex items-start justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 to-red-600 text-white flex items-center justify-center text-2xl shadow-md shadow-rose-500/25 group-hover:rotate-6 transition-transform">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <span class="font-serif text-4xl font-bold text-rose-300/80 select-none">03</span>
+                    </div>
+                    
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-900 mb-3 group-hover:text-rose-600 transition-colors">
+                        Надёжный как скала
+                    </h3>
+                    <p class="text-rose-900/80 leading-relaxed text-sm sm:text-base">
+                        Решит любую сложную проблему, легко откроет самую тугую банку на кухне, укроет пледом и обязательно согреет, когда у тебя замёрзли руки.
+                    </p>
+                </article>
+
+                <!-- Причина 4 -->
+                <article class="tilt-card glass-card rounded-3xl p-7 sm:p-9 relative overflow-hidden reveal group cursor-pointer" onclick="burstAtEvent(event, 22)">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 bg-gradient-to-br from-pink-300/40 to-rose-400/30 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="flex items-start justify-between mb-5">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-rose-600 text-white flex items-center justify-center text-2xl shadow-md shadow-rose-500/25 group-hover:-rotate-6 transition-transform">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <span class="font-serif text-4xl font-bold text-rose-300/80 select-none">04</span>
+                    </div>
+                    
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-900 mb-3 group-hover:text-rose-600 transition-colors">
+                        Безумно тебя любит
+                    </h3>
+                    <p class="text-rose-900/80 leading-relaxed text-sm sm:text-base">
+                        Смотрит на тебя так, будто ты — самое главное и прекрасное чудо во всей Вселенной (спойлер: так оно на самом деле и есть!).
+                    </p>
+                </article>
+
+                <!-- Причина 5 (На всю ширину на десктопе) -->
+                <article class="tilt-card glass-card rounded-3xl p-7 sm:p-10 md:col-span-2 relative overflow-hidden reveal group cursor-pointer border-2 border-pink-300/80" onclick="burstAtEvent(event, 30)">
+                    <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-gradient-to-tr from-rose-400/30 to-pink-300/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="flex-shrink-0 flex items-center justify-between md:justify-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 via-rose-500 to-pink-600 text-white flex items-center justify-center text-3xl shadow-lg shadow-rose-500/30 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <span class="font-serif text-5xl font-bold text-rose-300/80 md:hidden select-none">05</span>
+                        </div>
+                        
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-900 mb-2 group-hover:text-rose-600 transition-colors">
+                                    Он выбрал именно тебя
+                                </h3>
+                                <span class="hidden md:block font-serif text-5xl font-bold text-rose-300/80 select-none">05</span>
+                            </div>
+                            <p class="text-rose-900/85 leading-relaxed text-sm sm:text-lg">
+                                А этот факт уже сам по себе безоговорочно доказывает его безупречный вкус, невероятную мудрость и абсолютную гениальность!
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ИНТЕРАКТИВНЫЙ ДЕТЕКТОР КРУТОСТИ -->
+        <section class="py-10 reveal">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 text-center max-w-3xl mx-auto">
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-rose-900 mb-2">
+                    Интерактивный детектор любви и крутости
+                </h3>
+                <p class="text-sm sm:text-base text-rose-800/80 mb-6">
+                    Жми на кнопку ниже, чтобы зарядить этот сайт сердечками и проверить уровень нашей совместимости!
+                </p>
+
+                <!-- Прогресс-бар -->
+                <div class="w-full bg-pink-200/70 rounded-full h-5 mb-4 overflow-hidden p-1 shadow-inner">
+                    <div id="loveProgressBar" class="bg-gradient-to-r from-pink-400 via-rose-500 to-red-500 h-full rounded-full transition-all duration-500 flex items-center justify-end pr-2" style="width: 100%;">
+                        <span class="w-2 h-2 bg-white rounded-full animate-ping"></span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center gap-4 mt-6">
+                    <button onclick="triggerLoveBoost(event)" class="btn-love text-white font-bold px-7 py-3.5 rounded-full shadow-md flex items-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-heart animate-pulse"></i>
+                        <span>Добавить ещё 100% любви!</span>
+                    </button>
+                    
+                    <button onclick="launchHeartRain()" class="bg-white/80 hover:bg-white text-rose-700 font-bold px-6 py-3.5 rounded-full shadow-sm border border-pink-200 flex items-center gap-2 transition cursor-pointer">
+                        <i class="fa-solid fa-cloud-showers-heavy text-pink-500"></i>
+                        <span>Запустить дождь из сердец</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- БОНУСНАЯ ПРИЧИНА №6 (Секретная валентинка) -->
+        <section class="py-16 sm:py-24 text-center reveal">
+            <div class="max-w-2xl mx-auto">
+                <span class="font-handwriting text-3xl sm:text-4xl text-rose-600 block mb-2">
+                    Подожди, это ещё не всё...
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-rose-900 mb-8">
+                    Есть секретная причина №6 💌
+                </h2>
+
+                <!-- Кнопка-конверт для открытия секрета -->
+                <div id="secretEnvelopeWrapper" class="transition-all duration-500">
+                    <button id="openSecretBtn" onclick="openSecretReason(event)" class="group relative inline-flex flex-col items-center justify-center p-8 sm:p-10 rounded-3xl glass-card border-2 border-dashed border-rose-400 hover:border-solid hover:border-rose-500 transition-all duration-300 cursor-pointer hover:-translate-y-1">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-rose-500 to-pink-400 text-white flex items-center justify-center text-4xl shadow-lg shadow-rose-500/30 mb-4 group-hover:scale-110 transition-transform animate-bounce">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-rose-800">
+                            Нажми, чтобы открыть секретную валентинку
+                        </span>
+                        <span class="text-xs sm:text-sm text-rose-600 mt-1">
+                            (Осторожно: вызывает приступ сильной улыбки)
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Скрытый блок с признанием -->
+                <div id="secretContent" class="hidden opacity-0 transform scale-90 transition-all duration-700">
+                    <div class="glass-card rounded-3xl p-8 sm:p-12 border-2 border-rose-300 relative overflow-hidden shadow-2xl">
+                        <!-- Декоративные уголки -->
+                        <i class="fa-solid fa-heart text-rose-200/60 text-6xl absolute -top-3 -left-3 -rotate-12"></i>
+                        <i class="fa-solid fa-heart text-rose-200/60 text-6xl absolute -bottom-3 -right-3 rotate-12"></i>
+
+                        <div class="inline-block px-4 py-1 rounded-full bg-rose-100 text-rose-600 font-bold text-xs uppercase tracking-wider mb-4">
+                            Бонусная причина №6
+                        </div>
+
+                        <h3 class="font-serif text-2xl sm:text-4xl font-bold text-rose-900 mb-5">
+                            Ты делаешь меня самым счастливым!
+                        </h3>
+
+                        <p class="text-rose-900/90 text-base sm:text-lg leading-relaxed mb-6 font-medium">
+                            На самом деле главная причина моей крутости — это <span class="text-rose-600 font-bold">ты</span>. Рядом с тобой хочется становиться лучше каждый день, улыбаться, сворачивать горы и дарить тебе весь мир. Спасибо, что ты есть у меня. Я тебя очень сильно люблю! ❤️
+                        </p>
+
+                        <p class="font-handwriting text-3xl sm:text-4xl text-rose-600 font-bold mb-8">
+                            Твой самый крутой парень 🥰
+                        </p>
+
+                        <!-- Кнопка подтверждения -->
+                        <button id="confirmBestBtn" onclick="confirmBoyfriend(event)" class="btn-love text-white font-bold text-base sm:text-lg px-8 py-4 rounded-full shadow-xl shadow-rose-500/30 inline-flex items-center gap-3 cursor-pointer">
+                            <i class="fa-solid fa-check-double"></i>
+                            <span id="confirmBtnText">Подтверждаю, ты лучший! ❤️</span>
+                        </button>
+
+                        <!-- Сообщение после подтверждения -->
+                        <div id="confirmedBadge" class="hidden mt-6 p-4 rounded-2xl bg-white/80 border border-rose-200 text-rose-800 font-semibold text-sm sm:text-base animate-fade-in">
+                            🎉 Статус «Самый лучший парень во Вселенной» официально подтверждён! Обнимаю тебя крепко-крепко! 🤗💖
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Футер -->
+    <footer class="relative z-20 text-center py-8 px-4 text-rose-800/70 text-xs sm:text-sm font-medium">
+        <p>Сделано с бесконечной любовью специально для тебя <i class="fa-solid fa-heart text-rose-500 animate-pulse mx-1"></i></p>
+        <p class="mt-1 text-rose-600/60 text-xs">Подсказка: кликни в любое место экрана, чтобы запустить салют из сердечек ✨</p>
+    </footer>
+
+    <!-- JAVASCRIPT ЛОГИКА -->
+    <script>
+        // ==========================================
+        // 1. CANVAS АНИМАЦИЯ: ФОНОВЫЕ СЕРДЦА И САЛЮТ
+        // ==========================================
+        const canvas = document.getElementById('heartCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        let bgHearts = [];
+        let burstParticles = [];
+
+        // Палитра нежных и ярких розово-красных оттенков
+        const colors = [
+            '#ff4d6d', '#ff758f', '#ff8fa3', '#ffb3c1', 
+            '#e11d48', '#fb7185', '#f43f5e', '#ec4899', '#fda4af'
+        ];
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Функция рисования красивого векторного сердечка на Canvas
+        function drawHeart(ctx, x, y, size, color, alpha, rotation = 0) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(rotation);
+            ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+            ctx.fillStyle = color;
+
+            ctx.beginPath();
+            const topCurveHeight = size * 0.3;
+            ctx.moveTo(0, topCurveHeight);
+            // Левая половинка
+            ctx.bezierCurveTo(
+                0, 0, 
+                -size / 2, 0, 
+                -size / 2, topCurveHeight
+            );
+            ctx.bezierCurveTo(
+                -size / 2, (size + topCurveHeight) / 2, 
+                0, (size + topCurveHeight) / 1.4, 
+                0, size
+            );
+            // Правая половинка
+            ctx.bezierCurveTo(
+                0, (size + topCurveHeight) / 1.4, 
+                size / 2, (size + topCurveHeight) / 2, 
+                size / 2, topCurveHeight
+            );
+            ctx.bezierCurveTo(
+                size / 2, 0, 
+                0, 0, 
+                0, topCurveHeight
+            );
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+
+        // Класс фонового парящего сердечка
+        class FloatingHeart {
+            constructor(initial = false) {
+                this.reset(initial);
+            }
+
+            reset(initial = false) {
+                this.x = Math.random() * width;
+                this.y = initial ? Math.random() * height : height + 30;
+                this.size = Math.random() * 16 + 10; // от 10 до 26px
+                this.speedY = Math.random() * 0.8 + 0.35;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.wobble = Math.random() * Math.PI * 2;
+                this.wobbleSpeed = Math.random() * 0.02 + 0.01;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.alpha = Math.random() * 0.35 + 0.15;
+                this.rotation = (Math.random() - 0.5) * 0.5;
+            }
+
+            update() {
+                this.y -= this.speedY;
+                this.wobble += this.wobbleSpeed;
+                this.x += Math.sin(this.wobble) * 0.5 + this.speedX;
+                this.rotation = Math.sin(this.wobble) * 0.25;
+
+                if (this.y < -40) {
+                    this.reset(false);
+                }
+            }
+
+            draw() {
+                drawHeart(ctx, this.x, this.y, this.size, this.color, this.alpha, this.rotation);
+            }
+        }
+
+        // Класс частицы для салюта при клике (сердечки и искорки)
+        class BurstParticle {
+            constructor(x, y, isRain = false) {
+                this.x = x;
+                this.y = y;
+                this.isHeart = Math.random() > 0.25; // 75% сердечки, 25% сияющие искорки
+                this.size = this.isHeart ? (Math.random() * 14 + 10) : (Math.random() * 4 + 2);
+                
+                if (isRain) {
+                    this.vx = (Math.random() - 0.5) * 3;
+                    this.vy = Math.random() * 4 + 3;
+                    this.gravity = 0.05;
+                } else {
+                    const angle = Math.random() * Math.PI * 2;
+                    const velocity = Math.random() * 7 + 2.5;
+                    this.vx = Math.cos(angle) * velocity;
+                    this.vy = Math.sin(angle) * velocity - 2.5; // легкий импульс вверх
+                    this.gravity = 0.16;
+                }
+
+                this.friction = 0.97;
+                this.alpha = 1;
+                this.decay = isRain ? (Math.random() * 0.008 + 0.005) : (Math.random() * 0.018 + 0.012);
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.rotation = (Math.random() - 0.5) * 1.2;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.08;
+            }
+
+            update() {
+                this.vx *= this.friction;
+                this.vy *= this.friction;
+                this.vy += this.gravity;
+                this.x += this.vx;
+                this.y += this.vy;
+                this.rotation += this.rotationSpeed;
+                this.alpha -= this.decay;
+            }
+
+            draw() {
+                if (this.alpha <= 0) return;
+                if (this.isHeart) {
+                    drawHeart(ctx, this.x, this.y, this.size, this.color, this.alpha, this.rotation);
+                } else {
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(0, this.alpha);
+                    ctx.fillStyle = '#fff0f5';
+                    ctx.shadowColor = this.color;
+                    ctx.shadowBlur = 8;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+        }
+
+        // Инициализация фоновых сердечек (адаптивное количество)
+        const bgHeartCount = window.innerWidth < 640 ? 22 : 40;
+        for (let i = 0; i < bgHeartCount; i++) {
+            bgHearts.push(new FloatingHeart(true));
+        }
+
+        // Функция запуска взрыва сердечек в координатах (x, y)
+        function createHeartBurst(x, y, count = 24) {
+            for (let i = 0; i < count; i++) {
+                burstParticles.push(new BurstParticle(x, y, false));
+            }
+        }
+
+        // Вспомогательные функции для вызова из HTML
+        function burstAtEvent(e, count = 25) {
+            const x = e.clientX || (e.touches && e.touches[0].clientX) || width / 2;
+            const y = e.clientY || (e.touches && e.touches[0].clientY) || height / 2;
+            createHeartBurst(x, y, count);
+        }
+
+        function burstAtElement(el, count = 30) {
+            const rect = el.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            createHeartBurst(x, y, count);
+        }
+
+        // Дождь из сердечек сверху экрана
+        function launchHeartRain() {
+            for (let i = 0; i < 65; i++) {
+                setTimeout(() => {
+                    const x = Math.random() * width;
+                    burstParticles.push(new BurstParticle(x, -20, true));
+                }, i * 25);
+            }
+        }
+
+        // Салют при клике в любое свободное место экрана
+        document.addEventListener('click', (e) => {
+            // Если клик не по кнопке/карточке, у которых уже есть свой обработчик
+            if (!e.target.closest('button') && !e.target.closest('a') && !e.target.closest('.tilt-card')) {
+                createHeartBurst(e.clientX, e.clientY, 18);
+            }
+        });
+
+        // Главный цикл анимации
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Обновляем и рисуем фоновые сердца
+            for (let heart of bgHearts) {
+                heart.update();
+                heart.draw();
+            }
+
+            // Обновляем и рисуем частицы салюта
+            for (let i = burstParticles.length - 1; i >= 0; i--) {
+                const p = burstParticles[i];
+                p.update();
+                p.draw();
+                if (p.alpha <= 0 || p.y > height + 50) {
+                    burstParticles.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        window.onload = function() {
+            animate();
+            // Приветственный небольшой салют при загрузке
+            setTimeout(() => {
+                createHeartBurst(width / 2, height / 3, 25);
+            }, 500);
+        };
+
+        // ==========================================
+        // 2. ИНТЕРАКТИВНЫЙ СЧЁТЧИК ЛЮБВИ И КОМПЛИМЕНТЫ
+        // ==========================================
+        let loveScore = 100;
+        const compliments = [
+            "Ты — моё самое любимое уведомление в телефоне! 📱❤️",
+            "Твоя улыбка освещает всё вокруг ярче солнца! ☀️✨",
+            "С тобой каждый день превращается в романтический фильм! 🎬💖",
+            "Официально: ты самая красивая девушка на планете! 👑🌹",
+            "Моё сердце бьётся быстрее, когда ты рядом! 💓🥰",
+            "Уровень любви зашкаливает за пределы Вселенной! 🚀💞",
+            "Ты — моё вдохновение и главное счастье! 🌸✨"
+        ];
+        let complimentIndex = 0;
+
+        function triggerLoveBoost(e) {
+            if (e) burstAtEvent(e, 28);
+            
+            loveScore += Math.floor(Math.random() * 50) + 50;
+            const counterEl = document.getElementById('loveCounter');
+            counterEl.textContent = loveScore.toLocaleString('ru-RU');
+            
+            // Анимация пульсации счетчика
+            counterEl.parentElement.classList.add('scale-110');
+            setTimeout(() => counterEl.parentElement.classList.remove('scale-110'), 200);
+
+            // Показ милого комплимента
+            const toastText = document.getElementById('complimentText');
+            toastText.style.opacity = '0';
+            toastText.style.transform = 'translateY(8px)';
+            
+            setTimeout(() => {
+                toastText.textContent = compliments[complimentIndex % compliments.length];
+                complimentIndex++;
+                toastText.style.opacity = '1';
+                toastText.style.transform = 'translateY(0)';
+            }, 150);
+        }
+
+        // ==========================================
+        // 3. СЕКРЕТНАЯ ВАЛЕНТИНКА (ПРИЧИНА №6)
+        // ==========================================
+        function openSecretReason(e) {
+            burstAtEvent(e, 45);
+            launchHeartRain();
+
+            const wrapper = document.getElementById('secretEnvelopeWrapper');
+            const content = document.getElementById('secretContent');
+
+            wrapper.style.opacity = '0';
+            wrapper.style.transform = 'scale(0.9)';
+            
+            setTimeout(() => {
+                wrapper.classList.add('hidden');
+                content.classList.remove('hidden');
+                
+                // Плавное появление открытки
+                requestAnimationFrame(() => {
+                    content.style.opacity = '1';
+                    content.style.transform = 'scale(1)';
+                });
+            }, 300);
+        }
+
+        function confirmBoyfriend(e) {
+            burstAtEvent(e, 60);
+            launchHeartRain();
+
+            const btn = document.getElementById('confirmBestBtn');
+            const btnText = document.getElementById('confirmBtnText');
+            const badge = document.getElementById('confirmedBadge');
+
+            btnText.textContent = 'Подтверждено на 1000%! 💖';
+            btn.classList.add('ring-4', 'ring-pink-300');
+            badge.classList.remove('hidden');
+            
+            loveScore += 1000;
+            document.getElementById('loveCounter').textContent = loveScore.toLocaleString('ru-RU');
+        }
+
+        // ==========================================
+        // 4. SCROLL REVEAL (ПОЯВЛЕНИЕ ПРИ ПРОКРУТКЕ)
+        // ==========================================
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, idx) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, idx * 80);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ==========================================
+        // 5. МЯГКИЙ 3D-НАКЛОН КАРТОЧЕК ПРИ НАВЕДЕНИИ
+        // ==========================================
+        const tiltCards = document.querySelectorAll('.tilt-card');
+
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                if (window.innerWidth < 768) return; // На мобильных отключаем наклон от мыши
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -6;
+                const rotateY = ((x - centerX) / centerX) * 6;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            });
+        });
+    </script>
+</body>
+</html>
